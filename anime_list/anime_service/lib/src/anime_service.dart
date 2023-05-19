@@ -50,6 +50,33 @@ class AnimeService {
     return animeList ?? [];
   }
 
+  Future<List<String>> getAllAnimeGenres() async {
+    const query = r'''
+      query GetAllAnimeGenres {
+        GenreCollection
+      }
+    ''';
+
+    final options = QueryOptions(
+      document: gql(query),
+    );
+
+    final result = await _client.query(options);
+
+    if (result.hasException) {
+      throw Exception('Failed to fetch anime genres: ${result.exception}');
+    }
+
+    final List<dynamic> genreList =
+        result.data?['GenreCollection'] as List<dynamic>;
+
+    if (genreList == null) {
+      throw Exception('No anime genres found.');
+    }
+
+    return genreList.cast<String>();
+  }
+
   Future<List<dynamic>> getCharacterList(int animeId) async {
     final query = r'''
       query GetCharacterList($animeId: Int!) {
