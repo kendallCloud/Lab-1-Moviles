@@ -28,15 +28,16 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
+  anime_repository:
+    path: ../anime_list/anime_repository
+
   flutter:
     sdk: flutter
 
   very_good_cli: ^2.3.0
   flutter_bloc: ^8.1.1
   bloc: ^8.1.0
-   anime_repository: 
-    path: ../anime_list/anime_service
-
 
 
   # The following adds the Cupertino Icons font to your application.

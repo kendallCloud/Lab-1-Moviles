@@ -1,4 +1,4 @@
-name: anime_repo
+name: anime_repository
 description: A Very Good Project created by Very Good CLI.
 version: 0.1.0+1
 publish_to: none
@@ -8,8 +8,13 @@ environment:
   flutter: 3.7.0
 
 dependencies:
+
+  anime_service: 
+    path: ../anime_list/anime_service
+
   flutter:
     sdk: flutter
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

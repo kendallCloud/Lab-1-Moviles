@@ -1,4 +1,4 @@
-import 'package:anime_service/anime_service.dart';
+//import 'package:anime_service/anime_service.dart';
 import 'package:flutter/material.dart';
 
 void main() {
