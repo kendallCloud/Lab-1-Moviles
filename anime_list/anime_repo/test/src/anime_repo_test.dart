@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:anime_repository/anime_repository.dart';
+import 'package:anime_repo/anime_repo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group('AnimeRepository', () {
+  group('AnimeRepo', () {
     test('can be instantiated', () {
-      expect(AnimeRepository(), isNotNull);
+      expect(AnimeRepo(), isNotNull);
     });
   });
 }
